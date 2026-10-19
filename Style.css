@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+}
+#numbers{
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows: auto;
+    gap: 10px;
+    div{
+        grid-column: span 1;
+        height: 100px;
+        width: 100px;
+    }
+    div:hover{
+        background-color: lightgray;
+    }
+
+}
+.but{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
