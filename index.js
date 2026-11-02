@@ -13,36 +13,52 @@ function ret(){
     equations.push(k);
     currIndex++;
     sessionStorage.setItem("nums", equations);
-    k= "";
-    // document.getElementById("displayNum").value = k;
+    document.getElementById("displayNum").value = "";
 }
 
 function arrow(direction){
-
-    let k = document.getElementById("displayNum").value;
-    // if(equations[currIndex] !== k){
-    //
-    // }
-
-    document.getElementById("displayOutput").innerText = "";
-    if(direction === "forward"){
-        if(currIndex === 0){
-            document.getElementById("displayNum").value = equations[currIndex];
-        }
-        else {
-            currIndex--;
-            document.getElementById("displayNum").value = equations[currIndex];
+    if(equations.length > 0) {
+        let k = document.getElementById("displayNum").value;
+        document.getElementById("displayOutput").innerText = "";
+        if (equations[currIndex] !== k) {
+            currIndex = equations.length;
+            if (direction === "forward") {
+                if (currIndex === 0) {
+                    document.getElementById("displayNum").value = equations[currIndex];
+                } else {
+                    currIndex--;
+                    document.getElementById("displayNum").value = equations[currIndex];
+                }
+            } else {
+                if (currIndex >= equations.length - 1) {
+                    k = "";
+                    document.getElementById("displayNum").value = k;
+                } else {
+                    currIndex++;
+                    document.getElementById("displayNum").value = equations[currIndex];
+                }
+            }
+        } else {
+            if (direction === "forward") {
+                if (currIndex === 0) {
+                    document.getElementById("displayNum").value = equations[currIndex];
+                } else {
+                    currIndex--;
+                    document.getElementById("displayNum").value = equations[currIndex];
+                }
+            } else {
+                if (currIndex >= equations.length - 1) {
+                    k = "";
+                    document.getElementById("displayNum").value = k;
+                } else {
+                    currIndex++;
+                    document.getElementById("displayNum").value = equations[currIndex];
+                }
+            }
         }
     }
     else{
-        if(currIndex === equations.length-1){
-            k = "";
-            document.getElementById("displayNum").value = k;
-        }
-        else{
-            currIndex++;
-            document.getElementById("displayNum").value = equations[currIndex];
-        }
+        document.getElementById("displayNum").value = "";
     }
 }
 
