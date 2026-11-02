@@ -6,36 +6,38 @@
     <script src = "index.js"></script>
     <link rel = "stylesheet" href = "Style.css">
 </head>
-<body>
-<div>
-    <p id = "displayNum">_</p>
+<body onload = "hist()">
+<div class = "calc">
+    <p id = "displayOutput">_</p>
 </div>
 <div id = "numbers">
-    <div class = "but">1</div>
-    <div class = "but">2</div>
-    <div class = "but">3</div>
-    <div class = "but">+</div>
-    <div class = "but">^</div>
-    <div class = "but">=</div>
-    <div class = "but">4</div>
-    <div class = "but">5</div>
-    <div class = "but">6</div>
-    <div class = "but">-</div>
-    <div class = "but">(</div>
-    <div class = "but">up</div>
-    <div class = "but">7</div>
-    <div class = "but">8</div>
-    <div class = "but">9</div>
-    <div class = "but">/</div>
-    <div class = "but">)</div>
-    <div class = "but">down</div>
-    <div class = "but">del</div>
-    <div class = "but">0</div>
-    <div class = "but">.</div>
-    <div class = "but">*</div>
-    <div class = "but">%</div>
+    <div class = "but" onclick = add("1")>1</div>
+    <div class = "but" onclick = add("2")>2</div>
+    <div class = "but" onclick = add("3")>3</div>
+    <div class = "but" onclick = add("+")>+</div>
+    <div class = "but" onclick = add("**")>**</div>
+    <div class = "but" onclick = ret()>=</div>
+    <div class = "but" onclick = add("4")>4</div>
+    <div class = "but" onclick = add("5")>5</div>
+    <div class = "but" onclick = add("6")>6</div>
+    <div class = "but" onclick = add("-")>-</div>
+    <div class = "but" onclick = add("(")>(</div>
+    <div class = "but" id = "up" onclick = "arrow('forward')">up</div>
+    <div class = "but" onclick = add("7")>7</div>
+    <div class = "but" onclick = add("8")>8</div>
+    <div class = "but" onclick = add("9")>9</div>
+    <div class = "but" onclick = add("/")>/</div>
+    <div class = "but" onclick = add(")")>)</div>
+    <div class = "but" id = "down" onclick = "arrow('back')">down</div>
+    <div class = "but" onclick = "del()">del</div>
+    <div class = "but" onclick = add("0")>0</div>
+    <div class = "but" onclick = add(".")>.</div>
+    <div class = "but" onclick = add("*")>*</div>
+    <div class = "but" onclick = add("%")>%</div>
 </div>
-<input type = "text" id = "keyboard">
-<button onclick = "solve()">enter</button>
+<p id = "type">Type Equations Here:</p>
+<div id = "enter">
+<input type = "text" id = "displayNum">
+</div>
 </body>
-</html>
+</html>2 Robertsville Rd, Freehold, NJ 07728
